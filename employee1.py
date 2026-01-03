@@ -1,5 +1,4 @@
-# Function to calculate salary grade
-def get_salary_grade(salary):
+def calculate_grade(salary):
     if salary >= 80000:
         return "Grade A"
     elif salary >= 60000:
@@ -11,24 +10,22 @@ def get_salary_grade(salary):
     else:
         return "Grade E"
 
-# Function to display employee details
-def display_employee_details(name, emp_id, department, salary):
-    grade = get_salary_grade(salary)
-    print("\n--- Employee Details ---")
+def display_employee(name, emp_id, department, salary):
+    grade = calculate_grade(salary)
     print("Employee Name :", name)
     print("Employee ID   :", emp_id)
     print("Department    :", department)
     print("Monthly Salary: ₹", salary)
     print("Salary Grade  :", grade)
 
-# Main program
 def main():
-    name = input("Enter Employee Name: ")
-    emp_id = input("Enter Employee ID: ")
-    department = input("Enter Department: ")
-    salary = float(input("Enter Monthly Salary (₹): "))
+    # Static values (NO input)
+    name = "Sindhu"
+    emp_id = "EMP101"
+    department = "IT"
+    salary = 65000
 
-    display_employee_details(name, emp_id, department, salary)
+    display_employee(name, emp_id, department, salary)
 
-# Run the program
 main()
+
